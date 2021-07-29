@@ -1,23 +1,24 @@
 [package]
-name = "binary-ff1"
+name = "binary-ff1-aes-v07"
 version = "0.1.0"
 authors = ["Saleem Rashid <dev@saleemrashid.com>"]
 edition = "2018"
-description = "Optimized Rust implementation of FF1 encryption with radix 2"
+description = "Optimized Rust implementation of FF1 encryption with radix 2 (temporary fork)"
 readme = "README.md"
-repository = "https://github.com/saleemrashid/binary-ff1"
+repository = "https://github.com/kornelski/binary-ff1.git"
+homepage = "https://github.com/saleemrashid/binary-ff1"
 license = "MIT OR Apache-2.0"
 keywords = ["crypto"]
 categories = ["cryptography", "no-std"]
 
-[dependencies]
-block-cipher = "0.8"
-
 [dev-dependencies]
-aes = "0.5"
-fpe = "0.3.1"
+aes = "0.7.4"
+fpe = { package = "fpe-v04", version = "0.4" }
 lazy_static = "1.4.0"
 num = "0.2.1"
 quickcheck = "0.9.1"
 quickcheck_macros = "0.9.1"
-rand = "0.7"
+rand = "0.8.4"
+
+[dependencies]
+cipher = "0.3.0"
